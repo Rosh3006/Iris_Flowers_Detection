@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style1.css') }}">
+
+<body>
+    
+    <div class="background">
+        <div class="iris">
+            <h2 class="title"> Iris Flowers Classification</h2>
+            <form action="/predict" method="POST" class="forms">
+                <label for="sepal_length">Sepal Length :</label> <br>
+                <input type="text" name="sepal_length"><br><br>
+                <label for="sepal_width">Sepal Width:</label> <br>
+                <input type="text" name="sepal_width"><br><br>
+                <label for="petal_length">Petal Length:</label> <br>
+                <input type="text" name="petal_length"><br><br>
+                <label for="petal_width">Petal Width</label><br>
+                <input type="text" name="petal_width"><br><br>
+               <b> Class:{{result}} </b><br><br>
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
